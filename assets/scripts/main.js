@@ -22,6 +22,50 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+          var $sidebar   = $(".sidebar"),
+              $window    = $(window),
+              offset     = $sidebar.offset(),
+              topPadding = 15;
+
+          $window.scroll(function() {
+              if ($window.scrollTop() > offset.top) {
+                  $sidebar.stop().animate({
+                      marginTop: $window.scrollTop() - offset.top + topPadding
+                  });
+              } else {
+                  $sidebar.stop().animate({
+                      marginTop: 0
+                  });
+              }
+          });
+
+
+
+          var $grid = $('.grid');
+          $grid.isotope({
+              // options
+              itemSelector: '.grid-item',
+              layoutMode: 'masonry',
+              stagger: 30,
+              fitWidth: true,
+              horizontalOrder: true, // new!
+              percentPosition: true,
+          });
+          $grid.imagesLoaded().progress( function() {
+              $grid.isotope('layout');
+          });
+
+          var iso = $grid.data('isotope');
+          $grid.infiniteScroll({
+                  path: '.navigation .nav-links .nav-previous a',
+                  append: '.grid-item',
+                  status: '.scroller-status',
+                  hideNav: '.navigation',
+                  outlayer: iso
+              }
+          );
+
       }
     },
     // Home page

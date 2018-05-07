@@ -13,7 +13,7 @@ function setup() {
   add_theme_support('soil-clean-up');
   add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
+ // add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
   // Make theme available for translation
@@ -86,6 +86,7 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    is_archive()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -96,6 +97,9 @@ function display_sidebar() {
  */
 function assets() {
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+
+    wp_enqueue_style('font/css', 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,600', false, null);
+    wp_enqueue_style('font-Pacifico/css', 'https://fonts.googleapis.com/css?family=Pacifico', false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');

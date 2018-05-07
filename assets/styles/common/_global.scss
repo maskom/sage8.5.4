@@ -1,1 +1,30 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  line-height: 1.4;
+  background: $color-bg-body;
+  -webkit-box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
+  box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
+}
 
+article {
+  margin-bottom: 30px;
+}
+figure {
+  max-height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: $color-bg-figure;
+  img {
+    width:100%;
+    object-fit: cover;
+    height: 350px !important;
+  }
+}
+.figure-caption {
+  margin-top: 15px;
+  .fig-bottom {
+    margin-top: 25px;
+  }
+}

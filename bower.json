@@ -7,13 +7,37 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "isotope-layout": "^3.0.6",
+    "infinite-scroll": "^3.0.4",
+    "imagesloaded": "^4.1.4"
   },
-    "overrides": {
+  "overrides": {
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
     "bootstrap": {
       "main": [
         "./scss/bootstrap.scss",
         "./dist/js/bootstrap.bundle.js"
+      ]
+    },
+    "isotope-layout": {
+      "main": [
+        "./dist/isotope.pkgd.min.js"
+      ]
+    },
+    "infinite-scroll": {
+      "main": [
+        "./dist/infinite-scroll.pkgd.min.js"
+      ]
+    },
+    "imagesloaded": {
+      "main": [
+        "./imagesloaded.pkgd.min.js"
       ]
     }
   }
