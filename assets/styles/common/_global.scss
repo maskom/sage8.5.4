@@ -1,3 +1,11 @@
+html {
+  font-size: 14px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -7,24 +15,45 @@ body {
   -webkit-box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
   box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-Oswald;
+}
+.product-name {
+  font-family: $font-family-roboto;
+  font-size: rem(12);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.product-price {
+  color: #ff7100;
+  font-weight: 700;
+  font-size: rem(14);
+}
 
 article {
   margin-bottom: 30px;
 }
 figure {
-  max-height: 350px;
+  max-height: $figure-height;
   margin: 0 auto;
   overflow: hidden;
   background-color: $color-bg-figure;
   img {
     width:100%;
     object-fit: cover;
-    height: 350px !important;
+    height: $figure-height !important;
   }
+
+  .rand & {
+    max-height: $figure-height-rand;
+
+    img {
+      height: $figure-height-rand !important;
+    }
+  }
+
 }
 .figure-caption {
   margin-top: 15px;
-  .fig-bottom {
-    margin-top: 25px;
-  }
 }
