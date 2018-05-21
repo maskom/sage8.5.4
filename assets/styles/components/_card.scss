@@ -1,0 +1,85 @@
+.grid-item {
+
+}
+.box-item {
+  background-color: white;
+  height: $box-height;
+  font-family: $font-family-roboto;
+  position: relative;
+  overflow: hidden;
+
+  .card-twitter & {
+    background-color: $color-box;
+
+    a {
+      color: white;
+    }
+
+    p {
+      font-size: rem(15);
+      line-height: 1.6;
+      @include media-breakpoint-between(lg, xl) {
+        font-size: rem(14);
+      }
+    }
+
+  }
+
+  .card-video-photo & {
+    &__info {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: rgba($color-box, .8);
+      transition: background .2s;
+      transform: translate3d(0,0,0);
+      color: white;
+
+      a {
+        color: white;
+      }
+    }
+
+    &:hover {
+      background-color: white;
+      &__info {
+        background-color: $color-box;
+      }
+    }
+
+  }
+
+  .site {
+    font-size: rem(12);
+  }
+
+  &__photo {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      opacity: 1;
+      height: auto;
+      z-index: 1;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+
+  }
+  &:hover {
+    img {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+
+  }
+  &:not(:hover):hover {
+    img {
+      opacity: 0.5;
+    }
+
+  }
+}

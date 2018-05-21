@@ -4,52 +4,65 @@ html {
     font-size: 16px;
   }
 }
-
-
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   line-height: 1.4;
+  font-size: rem(14);
   background: $color-bg-body;
-  -webkit-box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
-  box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
+  //-webkit-box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
+  //box-shadow: inset 0 0 50px hsla(30,13%,78%,.4), inset 0 0 100px #cfc8c1;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-Oswald;
 }
-.product-name {
-  font-family: $font-family-roboto;
+h1, .entry-title {
+  font-size: rem(24);
+}
+h2 {
+  font-size: rem(22);
+}
+h3 {
+  font-size: rem(20);
+}
+h4{
   font-size: rem(18);
-  line-height: 1.4;
-  font-weight: 300;
 }
-
-.product-price {
-  color: #ff7100;
-  font-weight: 700;
-  font-size: rem(14);
+h5{
+  font-size: rem(17);
 }
-
+h6{
+  font-size: rem(16);
+}
 article {
   margin-bottom: 30px;
 }
 figure {
+  width: 100%;
   max-height: $figure-height;
   margin: 0 auto;
   overflow: hidden;
   background-color: $color-bg-figure;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   img {
     width:100%;
     object-fit: cover;
     height: $figure-height !important;
   }
-
   .rand & {
     max-height: $figure-height-rand;
 
     img {
       height: $figure-height-rand !important;
+    }
+  }
+
+  .card-video-photo & {
+    max-height: $box-height;
+    img {
+      height: $box-height !important;
     }
   }
 

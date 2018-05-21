@@ -2,17 +2,23 @@
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
-$figure-height:       350px;
+$figure-height:       230px;
 $figure-height-rand:  200px;
+$box-height:          350px;
 
 $color-bg-figure:     #f5f5f5;
-$color-bg-body:       #fcfbf9;
+$color-bg-body:       #f4f7f6;
+$color-box:           #49c5b6;
 
+$link-color:          $color-box;
+$link-hover-decoration: none;
 $base-font-size:        16;
+
 
 //fonts family
 $font-family-Oswald:      'Oswald', sans-serif;
-$font-family-Pacifico:       'Pacifico', cursive;
-$font-family-roboto:       'Roboto', sans-serif;
+$font-family-Pacifico:    'Pacifico', cursive;
+$font-family-roboto:      'Roboto', sans-serif;
+$font-family-heebo:       'Heebo', sans-serif;
 
-$font-family-base : $font-family-roboto;
+$font-family-base : $font-family-heebo;

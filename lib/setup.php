@@ -85,7 +85,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('template-custom.php'),
+    //is_page_template('template-custom.php'),
     is_archive()
   ]);
 
@@ -101,6 +101,7 @@ function assets() {
     wp_enqueue_style('font/css', 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,600', false, null);
     wp_enqueue_style('font-Pacifico/css', 'https://fonts.googleapis.com/css?family=Pacifico', false, null);
     wp_enqueue_style('font-roboto/css', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', false, null);
+    wp_enqueue_style('font-heebo/css', 'https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900', false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');

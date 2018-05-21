@@ -46,7 +46,7 @@
           $grid.isotope({
               // options
               itemSelector: '.grid-item',
-              layoutMode: 'masonry',
+              layoutMode: 'fitRows',
               stagger: 30,
               fitWidth: true,
               horizontalOrder: true, // new!
